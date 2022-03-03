@@ -40,19 +40,19 @@ const emptyType = new Traveler({
     expect(newTraveler.travelerType).to.equal("relaxer");
   });
 
-  it.skip('should have a method to return the name of the traveler', function() {
+  it('should have a method to return the name of the traveler', function() {
     expect(newTraveler.returnName()).to.equal("Jakey");
   });
 
-  it.skip('should return error message if name info is missing', function () {
+  it('should return error message if name info is missing', function () {
     expect(emptyName.returnName()).to.equal("Sorry, this user has no name!")
   })
 
-  it.skip('should have a method to return the type of traveler', function() {
+  it('should have a method to return the type of traveler', function() {
     expect(newTraveler.returnType()).to.equal("relaxer");
   });
 
-  it.skip('should return error message if type info is missing', function () {
+  it('should return error message if type info is missing', function () {
     expect(emptyType.returnType()).to.equal("Sorry, this user has no type!")
   })
 
