@@ -56,7 +56,4 @@ const emptyType = new Traveler({
     expect(emptyType.returnType()).to.equal("Sorry, this user has no type!")
   })
 
-
-
-
 });
