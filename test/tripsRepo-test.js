@@ -61,14 +61,19 @@ describe('TripsRepo Test', function() {
 
 
     it("method to return total price for one trip", function () {
-      console.log(tripRepo.tripCost(5, 42, destRepo))
-      expect(tripRepo.tripCost(5, 42, destRepo)).to.deep.equal();
+      
+      expect(tripRepo.tripCost(5, destRepo)).to.equal(12012);
     });
 
 
-    it.skip("method for total ammount user spent on trips this year and include 10% travel fee", function () {
-      console.log(tripRepo.yearlyCost(42, destRepo))
-      expect(tripRepo.yearlyCost(42, destRepo)).to.deep.equal();
+    it("method for total ammount user spent on trips this year and include 10% travel fee", function () {
+      // console.log(tripRepo.yearlyCost(44, destRepo))
+      expect(tripRepo.yearlyCost(33, destRepo)).to.equal(41052);
+    });
+
+    it("method for total ammount user spent on trips this year and include 10% travel fee", function () {
+      // console.log(tripRepo.yearlyCost(44, destRepo))
+      expect(tripRepo.yearlyCost(1, destRepo)).to.equal("No trips this year!");
     });
 
 });
