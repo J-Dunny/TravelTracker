@@ -30,9 +30,9 @@ class TripsRepository {
     }
 
     yearlyCost(travelerId, destRepo){
-        //filter trips for 2022
+       
         const trips = this.travelerTrips(travelerId).filter(trip => {
-            // console.log(trip.date.split('/')[0])
+            
             if (trip.date.split('/')[0] === "2022"){
                 return trip
             }
