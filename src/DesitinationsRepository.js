@@ -14,6 +14,13 @@ class DestinationsRepository {
 
         return destination
     }
+
+    destinationID(destName){
+        const destination = this.allDestinations.find(destination => destination.destination === destName).id
+
+        return destination
+    }
+    
     flightCost(destID){
         
         const cost = this.allDestinations.find(destination => destination.id === destID)
@@ -25,10 +32,6 @@ class DestinationsRepository {
 
         return cost.estimatedLodgingCostPerDay
     }
-
-    // destination(destID){
-    //     const destination = 
-    // }
     
 }
 

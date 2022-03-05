@@ -19,11 +19,15 @@
         <input id="numTravelersInput" type="number" name="numTravelers" placeholder="1">
         <label for="destinationsInput">Destination:</label>
         <select name="destinationsInput" id="destinationsInput">
-          <!-- <option value=""></option> -->
         </select>
         <input type="submit" value="Submit">
+        <p id="errorTag" class="error"></p>
       </form>
+      <p id="estimate"></p>
+      <p id="yearlyCost">Total amount spent this year:</p>
     </article>
+    
+    
   <section id="listAllTrips" class="all-trips">
     <!-- <article id="trip-Card" class="trip-card">
       <p>destination.destination</p>
@@ -35,7 +39,7 @@
     </article> -->
     <!-- all trips cards -->
   </section>
-  <h2 id="yearlyCost">Total amount spent this year:</h2>
+  
 </section>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
