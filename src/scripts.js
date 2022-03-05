@@ -19,7 +19,7 @@ import { tripsData, destinationsData, allTravelers } from "./apiCalls"
 let travelerRepo;
 let destRepo;
 let tripRepo;
-let user = 50;
+let user = 1;
 
 
 window.onload = (event) => {
