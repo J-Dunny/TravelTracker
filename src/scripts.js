@@ -21,7 +21,7 @@ const durationInput = document.getElementById('durationInput');
 const numTravelersInput = document.getElementById('numTravelersInput');
 const destinationsInput = document.getElementById('destinationsInput');
 
-destinationsInput.addEventListener('click', estimateNewTripCost);
+destinationsInput.addEventListener('change', estimateNewTripCost);
 
 let travelerRepo;
 let destRepo;
@@ -67,10 +67,9 @@ function estimateNewTripCost() {
     const fee = (flightCost + lodgingCost) * .1;
 
     const total = flightCost + lodgingCost + fee
+
     domUpdates.estimatedTripCost(total)
+
     return total
-
-
-
 }
 
