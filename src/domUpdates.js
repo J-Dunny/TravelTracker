@@ -1,5 +1,6 @@
 const listAllTrips = document.getElementById('listAllTrips')
 const displayYearlyCost = document.getElementById('yearlyCost')
+const destinationsInput = document.getElementById('destinationsInput')
 
 let domUpdates = {
 
@@ -14,20 +15,17 @@ let domUpdates = {
         </article>`)
     },
 
-    //     < article id = "trip-Card" class="trip-card" >
-    //   <p>destination.destination</p>
-    //   <p>destination.image</p>
-    //   <p>trip.date</p>
-    //   <p>trip.duration</p>
-    //   <p>trip.status</p>
-    //   <p>trips.travelers</p>
-    // </article >
+    yearlyCost(yearlyCost) {
+        displayYearlyCost.innerText = `Yearly Cost = ${yearlyCost}`
+    },
 
-    yearlyCost(yearlyCost){
-    displayYearlyCost.innerText = `Yearly Cost = ${yearlyCost}`
-}
-
-
+    destinationsInput(destRepo){
+        destRepo.allDestinations.forEach(destination => destinationsInput.innerHTML += `<option value="${destination.destination}">${destination.destination}</option>`)
     }
+
+
+
+
+}
 
 export default domUpdates

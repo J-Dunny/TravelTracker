@@ -20,7 +20,7 @@ html {
 
   .trip-card {
     width: 25vw;
-    height: 60vh;
+    height: 50vh;
     padding: 15px;
     margin: 5px;
     font-size: 1.3vw;
@@ -34,5 +34,5 @@ html {
   }
 
   img{
-    width: 20vw;
+    width: 22vw;
   }

@@ -19,7 +19,7 @@ import { tripsData, destinationsData, allTravelers } from "./apiCalls"
 let travelerRepo;
 let destRepo;
 let tripRepo;
-let user = 33;
+let user = 50;
 
 
 window.onload = (event) => {
@@ -36,6 +36,7 @@ window.onload = (event) => {
         tripRepo.loadAllTrips(data[2].trips)
         displayDashboard()
 
+
     }).catch(err => console.log(err));
 }
 
@@ -45,6 +46,6 @@ function displayDashboard(){
     domUpdates.listAllTrips(allTrips, destRepo)
     const yearlyCost = tripRepo.yearlyCost(user, destRepo)
     domUpdates.yearlyCost(yearlyCost)
-    
+    domUpdates.destinationsInput(destRepo)
  }
 
