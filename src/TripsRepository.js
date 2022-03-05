@@ -16,8 +16,7 @@ class TripsRepository {
 
     tripCost(tripId, destRepo){
         const trip = this.allTrips.find(trip => trip.id === tripId)
-        // console.log("1",trip)
-        /// * 2
+        
        const flightCost = destRepo.flightCost(trip.destinationID)* trip.travelers * 2
 
        const lodgingCost = destRepo.lodgingCost(trip.destinationID) * trip.travelers * trip.duration

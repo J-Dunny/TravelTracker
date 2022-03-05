@@ -1,6 +1,8 @@
 const listAllTrips = document.getElementById('listAllTrips')
 const displayYearlyCost = document.getElementById('yearlyCost')
 const destinationsInput = document.getElementById('destinationsInput')
+const estimate = document.getElementById('estimate')
+
 
 let domUpdates = {
 
@@ -21,6 +23,10 @@ let domUpdates = {
 
     destinationsInput(destRepo){
         destRepo.allDestinations.forEach(destination => destinationsInput.innerHTML += `<option value="${destination.destination}">${destination.destination}</option>`)
+    },
+
+    estimatedTripCost(total){
+        estimate.innerText = `Estimated Trip Cost = ${total}`
     }
 
 
