@@ -64,7 +64,7 @@ tripForm.addEventListener('submit', (e) => {
       "suggestedActivities": []
       
     };
-    console.log(newTrip)
+    // console.log(newTrip)
     addTrip(newTrip);
     e.target.reset();
   });

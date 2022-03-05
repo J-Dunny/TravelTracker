@@ -32,6 +32,7 @@ html {
     align-items: center;
     border: solid #303030 1px;
   }
+  
 .all-trips{
   /* width: 648px; */
   display: grid;
