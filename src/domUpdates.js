@@ -18,7 +18,7 @@ let domUpdates = {
     },
 
     yearlyCost(yearlyCost) {
-        displayYearlyCost.innerText = `Yearly Cost = ${yearlyCost}`
+        displayYearlyCost.innerText = `Spent This Year = $${yearlyCost}`
     },
 
     destinationsInput(destRepo){
@@ -26,7 +26,7 @@ let domUpdates = {
     },
 
     estimatedTripCost(total){
-        estimate.innerText = `Estimated Trip Cost = ${total}`
+        estimate.innerText = `Estimated Trip Cost = $${total}`
     }
 
 
