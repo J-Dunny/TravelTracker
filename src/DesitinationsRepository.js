@@ -1,6 +1,6 @@
 import Destination from "./Destination"
 class DestinationsRepository {
-    constructor(allDestinationsData){
+    constructor(){
         this.allDestinations = []
     }
 
@@ -19,6 +19,11 @@ class DestinationsRepository {
 
         return cost.estimatedLodgingCostPerDay
     }
+
+    // destination(destID){
+    //     const destination = 
+    // }
+    
 }
 
 
