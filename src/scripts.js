@@ -52,7 +52,7 @@ tripForm.addEventListener('submit', (e) => {
     // const formData = new FormData(e.target());
     const newTrip = {
       //add these query selectors
-      "id": 204,
+      "id": Date.now(),
       "userID": parseInt(user),
       "destinationID": destRepo.destinationID(destinationsInput.value),
       "travelers": parseInt(numTravelersInput.value),
@@ -62,14 +62,10 @@ tripForm.addEventListener('submit', (e) => {
       "suggestedActivities": []
       
     };
-    // console.log(newTrip)
+    console.log(newTrip)
     addTrip(newTrip);
     e.target.reset();
   });
-
-
-
-
 
 function displayDashboard() {
     const allTrips = tripRepo.travelerTrips(user)

@@ -16,13 +16,13 @@
       <h2>New Trip:</h2>
       <form id="tripForm" class="trip-form">
         <label for="date">Date:</label>
-        <input id="dateInput" type="text" placeholder="Year/Month/Day" name="date">
+        <input id="dateInput" type="text" placeholder="Year/Month/Day" name="date" required>
         <label for="duration">Duration in Days:</label>
-        <input id="durationInput" type="number" name="duration" placeholder="4">
+        <input id="durationInput" type="number" name="duration" placeholder="4" required>
         <label for="numTravelers">Number of Travelers:</label>
-        <input id="numTravelersInput" type="number" name="numTravelers" placeholder="1">
+        <input id="numTravelersInput" type="number" name="numTravelers" placeholder="1" required>
         <label for="destinationsInput">Destination:</label>
-        <select name="destinationsInput" id="destinationsInput">
+        <select name="destinationsInput" id="destinationsInput" required>
         </select>
         <input type="submit" value="Submit">
         <p id="errorTag" class="error"></p>
