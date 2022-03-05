@@ -42,7 +42,7 @@ window.onload = (event) => {
 
 function displayDashboard(){
     const allTrips = tripRepo.travelerTrips(user)
-    domUpdates.listAllTrips(allTrips)
+    domUpdates.listAllTrips(allTrips, destRepo)
     const yearlyCost = tripRepo.yearlyCost(user, destRepo)
     domUpdates.yearlyCost(yearlyCost)
     

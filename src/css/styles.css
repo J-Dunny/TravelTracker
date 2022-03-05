@@ -1,7 +1,7 @@
 body,
 html {
-  color: #F5F5F5;
-  background-color: #101010;
+  color: black;
+  background-color: white;
   height: 120vh;
   display: flex;
   flex-direction: column;
@@ -18,14 +18,21 @@ html {
     height: auto;
   }
 
-  .boxes {
+  .trip-card {
+    width: 25vw;
+    height: 60vh;
     padding: 15px;
     margin: 5px;
     font-size: 1.3vw;
+    color:white;
     background-color: #202020;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: solid #303030 1px;
+  }
+
+  img{
+    width: 20vw;
   }
