@@ -8,13 +8,35 @@
 </head>
 <body>
   <h1 class="Title">Travel Tracker</h1>
-  <section class="all-scheduled-trips">
-    <p>All Trips Here in a list</p>
-    <p>trip name:  , destination:   , date:  </p>
-
+  <section class="container">
+    <article id="formArticle" class="form-article">
+      <form id="tripForm" class ="trip-form">
+        <label for="date">Date:</label>
+        <input id="dateInput" type="text" placeholder="Year/Month/Day" name="date">
+        <label for="duration">Duration in Days:</label>
+        <input id="durationInput" type="number" name="duration" placeholder="4">
+        <label for="numTravelers">Number of Travelers:</label>
+        <input id="numTravelersInput" type="number" name="numTravelers" placeholder="1">
+        <label for="destinationsInput">Destination:</label>
+        <select name="destinationsInput" id="destinationsInput">
+          <!-- <option value=""></option> -->
+        </select>
+        <input type="submit" value="Submit">
+      </form>
+    </article>
+  <section id="listAllTrips" class="all-trips">
+    <!-- <article id="trip-Card" class="trip-card">
+      <p>destination.destination</p>
+      <p>destination.image</p>
+      <p>trip.date</p>
+      <p>trip.duration</p>
+      <p>trip.status</p>
+      <p>trips.travelers</p>
+    </article> -->
+    <!-- all trips cards -->
   </section>
-  <h2>Total amount spent this year:</h2>
-  
+  <h2 id="yearlyCost">Total amount spent this year:</h2>
+</section>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
 

@@ -1,12 +1,18 @@
 import Destination from "./Destination"
 class DestinationsRepository {
-    constructor(allDestinationsData){
+    constructor(){
         this.allDestinations = []
     }
 
     loadAllDestination(allDestinationsData) {
         this.allDestinations = allDestinationsData.map(destination => new Destination(destination))
         
+    }
+
+    destination(destID){
+        const destination = this.allDestinations.find(destination => destination.id === destID)
+
+        return destination
     }
     flightCost(destID){
         
@@ -19,6 +25,11 @@ class DestinationsRepository {
 
         return cost.estimatedLodgingCostPerDay
     }
+
+    // destination(destID){
+    //     const destination = 
+    // }
+    
 }
 
 

@@ -9,10 +9,10 @@ const expect = chai.expect;
 
 describe('TripsRepo Test', function() {
   
-    let destRepo = new DestinationsRepository(allDestinationsData)
+    let destRepo = new DestinationsRepository()
     destRepo.loadAllDestination(allDestinationsData)
 
-    let tripRepo = new TripsRepository(tripsData);
+    let tripRepo = new TripsRepository();
       tripRepo.loadAllTrips(tripsData)
 
     it("should be a function", function () {

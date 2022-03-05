@@ -1,7 +1,7 @@
 import Trip from "./Trip"
 import allDestinationsData from "./data/allDestinationsData"
 class TripsRepository {
-    constructor(tripsData){
+    constructor(){
         this.allTrips = []
     }
 

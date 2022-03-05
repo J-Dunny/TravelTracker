@@ -5,7 +5,7 @@ const expect = chai.expect;
 
 
 describe('Destination Repo Test', function() {
-const destRepo = new DestinationsRepository(destinationsData);
+const destRepo = new DestinationsRepository();
 destRepo.loadAllDestination(destinationsData)
 
 
