@@ -19,8 +19,8 @@ html {
   }
 
   .trip-card {
-    width: 25vw;
-    height: 50vh;
+    width: 21vw;
+    height: 65vh;
     padding: 15px;
     margin: 5px;
     font-size: 1.3vw;
@@ -32,7 +32,24 @@ html {
     align-items: center;
     border: solid #303030 1px;
   }
+.all-trips{
+  /* width: 648px; */
+  display: grid;
+  grid-template-columns: repeat(3, 5fr);
+  grid-gap: 20px;
+  padding: 20px;
+  min-height: 60vh;
+}
 
+/* .idea-box-section {
+  width: 648px;
+  display: grid;
+  grid-template-columns: repeat(3, 5fr);
+  grid-gap: 20px;
+  padding: 20px;
+  min-height: 60vh;
+  background-color: #EAEAF4;
+} */
   img{
     width: 22vw;
   }
