@@ -32,7 +32,7 @@ class TripsRepository {
        
         const trips = this.travelerTrips(travelerId).filter(trip => {
             
-            if (trip.date.split('/')[0] === "2022"){
+            if (trip.date.split('/')[0] === "2022" && trip.status === "approved"){
                 return trip
             }
         } )
