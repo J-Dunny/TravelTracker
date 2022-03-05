@@ -29,7 +29,6 @@ class TripsRepository {
     }
 
     yearlyCost(travelerId, destRepo){
-       
         const trips = this.travelerTrips(travelerId).filter(trip => {
             
             if (trip.date.split('/')[0] === "2022" && trip.status === "approved"){

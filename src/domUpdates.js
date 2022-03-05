@@ -1,7 +1,8 @@
-const listAllTrips = document.getElementById('listAllTrips')
-const displayYearlyCost = document.getElementById('yearlyCost')
-const destinationsInput = document.getElementById('destinationsInput')
-const estimate = document.getElementById('estimate')
+const listAllTrips = document.getElementById('listAllTrips');
+const displayYearlyCost = document.getElementById('yearlyCost');
+const destinationsInput = document.getElementById('destinationsInput');
+const estimate = document.getElementById('estimate');
+const userName = document.getElementById('userName');
 
 
 let domUpdates = {
@@ -27,10 +28,11 @@ let domUpdates = {
 
     estimatedTripCost(total){
         estimate.innerText = `Estimated Trip Cost = $${total}`
+    },
+
+    userName(travelerRepo, user){
+        userName.innerText = `Welcome, ${travelerRepo.displayTravelerData(user).name.split(' ')[0]}!`
     }
-
-
-
 
 }
 

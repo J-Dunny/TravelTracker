@@ -15,7 +15,6 @@ import TripsRepository from './TripsRepository'
 import DestinationsRepository from './DesitinationsRepository'
 import { tripsData, destinationsData, allTravelers, addTrip } from "./apiCalls"
 
-
 const dateInput = document.getElementById('dateInput');
 const durationInput = document.getElementById('durationInput');
 const numTravelersInput = document.getElementById('numTravelersInput');
@@ -29,7 +28,6 @@ let travelerRepo;
 let destRepo;
 let tripRepo;
 let user = 33;
-
 
 window.onload = (event) => {
     Promise.all([allTravelers, destinationsData, tripsData]).then((data) => {
@@ -79,10 +77,11 @@ function displayDashboard() {
     const yearlyCost = tripRepo.yearlyCost(user, destRepo)
     domUpdates.yearlyCost(yearlyCost)
     domUpdates.destinationsInput(destRepo)
+    domUpdates.userName(travelerRepo, user)
+    // displayTravelerData(travelerId)
 }
 
 function estimateNewTripCost() {
-
     const destId = destRepo.allDestinations.find(destination => destination.destination === destinationsInput.value).id
 
     const flightCost = destRepo.flightCost(destId) * numTravelersInput.value * 2
@@ -94,7 +93,7 @@ function estimateNewTripCost() {
     const total = flightCost + lodgingCost + fee
 
     domUpdates.estimatedTripCost(total)
-
+    
     return total
 }
 

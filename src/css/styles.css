@@ -10,7 +10,6 @@ html {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-
 .dasboard-container {
     display: flex;
     flex-direction: row;
@@ -73,15 +72,6 @@ select{
   width:10vw;
 }
 
-/* .idea-box-section {
-  width: 648px;
-  display: grid;
-  grid-template-columns: repeat(3, 5fr);
-  grid-gap: 20px;
-  padding: 20px;
-  min-height: 60vh;
-  background-color: #EAEAF4;
-} */
   img{
     width: 22vw;
   }
