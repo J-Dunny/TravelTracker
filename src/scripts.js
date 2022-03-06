@@ -27,7 +27,7 @@ destinationsInput.addEventListener('change', estimateNewTripCost);
 let travelerRepo;
 let destRepo;
 let tripRepo;
-let user = 33;
+let user = 3;
 
 window.onload = (event) => {
     Promise.all([allTravelers, destinationsData, tripsData]).then((data) => {

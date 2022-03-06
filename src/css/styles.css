@@ -1,6 +1,6 @@
 body,
 html {
-  color: black;
+  color: #333B53;
   background-color: white;
   height: 120vh;
   display: flex;
@@ -15,6 +15,10 @@ html {
     flex-direction: row;
     align-items: center;
     height: auto;
+  }
+
+  p{
+    margin: 1vh;
   }
 
   .trip-card {
@@ -51,9 +55,9 @@ html {
   display:flex;
   flex-direction: column;
   width: 18vw;
-  height: 60vh;
+  height: 55vh;
   padding: 10px;
-  border: 1px solid #D6D4D2;
+  border: 1px solid #333B53;
   /* background-color: #D6D4D2; */
   border-radius: 7px;
   
