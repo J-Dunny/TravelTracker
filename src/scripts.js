@@ -48,7 +48,7 @@ window.onload = (event) => {
 }
 
 tripForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // const formData = new FormData(e.target());
     const newTrip = {
       //add these query selectors

@@ -55,7 +55,7 @@ html {
   display:flex;
   flex-direction: column;
   width: 18vw;
-  height: 55vh;
+  height: 56vh;
   padding: 10px;
   border: 1px solid #333B53;
   /* background-color: #D6D4D2; */
@@ -67,6 +67,13 @@ html {
   display:flex;
   flex-direction: column;
 }
+
+/* .trips{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
 input{
   margin-top: 4px;
   margin-bottom: 10px;
