@@ -37,7 +37,8 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 5fr);
   grid-gap: 20px;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   min-height: 60vh;
 }
 
@@ -53,7 +54,9 @@ html {
   height: 60vh;
   padding: 10px;
   border: 1px solid #D6D4D2;
-
+  /* background-color: #D6D4D2; */
+  border-radius: 7px;
+  
 }
 
 .trip-form{
