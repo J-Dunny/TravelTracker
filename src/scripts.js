@@ -22,16 +22,40 @@ const destinationsInput = document.getElementById('destinationsInput');
 const tripForm = document.getElementById('tripForm');
 const errorTag = document.getElementById("errorTag");
 const loginForm = document.getElementById("login");
+const nameInput = document.getElementById("nameInput");
+const passwordInput = document.getElementById("passwordInput");
 
 destinationsInput.addEventListener('change', estimateNewTripCost);
-loginForm.addEventListener('submit', login)
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    login()
+})
 
 let travelerRepo;
 let destRepo;
 let tripRepo;
-let user = 3;
+let user;
+console.log(user)
 
-window.onload = (event) => {
+function login() {
+    const username = nameInput.value.slice(0,8)
+    // console.log(username)
+    const userID = nameInput.value.split("r")[2]
+    
+    const password = passwordInput.value
+    // console.log(password)
+    if(username === "traveler" && password === "travel"){
+        
+    user = parseInt(userID)
+    promises()
+    domUpdates.login()
+    console.log(user)
+
+    }
+
+}
+
+let promises = (event) => {
     Promise.all([allTravelers, destinationsData, tripsData]).then((data) => {
 
         travelerRepo = new TravelerRepository()
@@ -50,7 +74,7 @@ window.onload = (event) => {
 }
 
 tripForm.addEventListener('submit', (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     // const formData = new FormData(e.target());
     const newTrip = {
       //add these query selectors
@@ -95,7 +119,19 @@ function estimateNewTripCost() {
     return total
 }
 
-function login() {
+// function login() {
+//     const username = nameInput.value.slice(0,8)
+//     // console.log(username)
+//     const userID = nameInput.value.split("r")[2]
+    
+//     const password = passwordInput.value
+//     // console.log(password)
+//     if(username === "traveler" && password === "travel"){
+        
+//     user = parseInt(userID)
 
-}
+//     domUpdates.login()
+//     }
+
+// }
 

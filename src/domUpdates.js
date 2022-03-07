@@ -3,6 +3,8 @@ const displayYearlyCost = document.getElementById('yearlyCost');
 const destinationsInput = document.getElementById('destinationsInput');
 const estimate = document.getElementById('estimate');
 const userName = document.getElementById('userName');
+const formArticle = document.getElementById('formArticle');
+const login = document.getElementById('login');
 
 
 let domUpdates = {
@@ -32,6 +34,12 @@ let domUpdates = {
 
     userName(travelerRepo, user){
         userName.innerText = `Welcome, ${travelerRepo.displayTravelerData(user).name.split(' ')[0]}!`
+    },
+
+    login(){
+        formArticle.classList.remove('hidden')
+        listAllTrips.classList.remove('hidden')
+        login.classList.add('hidden')
     }
 
 }
