@@ -4,6 +4,7 @@ html {
   background-color: white;
   height: 120vh;
   display: flex;
+  width: max-content;
   flex-direction: column;
   align-items: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -15,7 +16,10 @@ html {
     flex-direction: row;
     align-items: center;
     height: auto;
+    /* width: max-content; */
   }
+
+
 
   p{
     margin: 1vh;
@@ -55,7 +59,8 @@ html {
   display:flex;
   flex-direction: column;
   width: 18vw;
-  height: 56vh;
+  font-size: 1.3vw;
+  height: max-content;
   padding: 10px;
   border: 1px solid #333B53;
   /* background-color: #D6D4D2; */

@@ -12,7 +12,16 @@
   <h1 class="Title">Travel Tracker</h1>
   <hr size="1" width="30%" color="black">
   <section class="container">
-    <article id="formArticle" class="form-article">
+    <!-- <section id="login" class="login"> -->
+      <form id="login" class="login">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="">
+        <label for="password">Password:</label>
+        <input type="text" name="password" id="">
+        <input type="submit" name="submit" id="">
+      </form>
+    <!-- </section> -->
+    <article id="formArticle" class="form-article hidden">
       <h1 id="userName"></h1>
       <hr size="1" width="100%" color="black">
       <h2>New Trip:</h2>
@@ -32,7 +41,7 @@
       <p id="estimate"></p>
       <p id="yearlyCost">Total amount spent this year:</p>
     </article>
-    <section id="listAllTrips" class="all-trips">
+    <section id="listAllTrips" class="all-trips hidden">
     </section>
   </section>
   <script src="bundle.js"></script>
