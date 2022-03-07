@@ -21,8 +21,10 @@ const numTravelersInput = document.getElementById('numTravelersInput');
 const destinationsInput = document.getElementById('destinationsInput');
 const tripForm = document.getElementById('tripForm');
 const errorTag = document.getElementById("errorTag");
+const loginForm = document.getElementById("login");
 
 destinationsInput.addEventListener('change', estimateNewTripCost);
+loginForm.addEventListener('submit', login)
 
 let travelerRepo;
 let destRepo;
@@ -91,5 +93,9 @@ function estimateNewTripCost() {
     domUpdates.estimatedTripCost(total)
     
     return total
+}
+
+function login() {
+
 }
 
