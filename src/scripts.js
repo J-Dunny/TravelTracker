@@ -91,7 +91,7 @@ function createPost(e) {
                 return errorTag.innerText = error.message
             }
         });
-        
+
     tripRepo.allTrips.push(newTrip)
 
     e.target.reset();
