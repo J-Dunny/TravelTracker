@@ -13,7 +13,7 @@ import Destination from './Destination';
 import TravelerRepository from './TravelerRepository';
 import TripsRepository from './TripsRepository'
 import DestinationsRepository from './DesitinationsRepository'
-import { tripsData, destinationsData, allTravelers, addTrip } from "./apiCalls"
+import { tripsDataFetch, destinationsDataFetch, allTravelersFetch, addTrip } from "./apiCalls"
 
 const dateInput = document.getElementById('dateInput');
 const durationInput = document.getElementById('durationInput');
@@ -59,7 +59,7 @@ function login() {
 }
 
 function promises() {
-    Promise.all([allTravelers, destinationsData, tripsData]).then((data) => {
+    Promise.all([allTravelersFetch(), destinationsDataFetch(), tripsDataFetch()]).then((data) => {
 
         travelerRepo = new TravelerRepository()
         travelerRepo.loadTravelerInfo(data[0].travelers)
@@ -73,30 +73,64 @@ function promises() {
 
         displayDashboard()
 
-
     }).catch(err => console.log(err));
 }
 
 tripForm.addEventListener('submit', (e) => {
 
     e.preventDefault();
+
+    createPost(e)
+    displayDashboard();
+    // setTimeout(promises(), 1500)
+
     // const formData = new FormData(e.target());
-    const newTrip = {
-      "id": Date.now(),
-      "userID": parseInt(user),
-      "destinationID": destRepo.destinationID(destinationsInput.value),
-      "travelers": parseInt(numTravelersInput.value),
-      "date": dateInput.value.replaceAll('-', '/'),
-      "duration": parseInt(durationInput.value),
-      "status": "pending",
-      "suggestedActivities": []
+    // const newTrip = {
+    //   "id": Date.now(),
+    //   "userID": parseInt(user),
+    //   "destinationID": destRepo.destinationID(destinationsInput.value),
+    //   "travelers": parseInt(numTravelersInput.value),
+    //   "date": dateInput.value.replaceAll('-', '/'),
+    //   "duration": parseInt(durationInput.value),
+    //   "status": "pending",
+    //   "suggestedActivities": []
       
-    };
-    console.log(newTrip)
-    addTrip(newTrip);
+    // };
+    // console.log(newTrip)
+    // addTrip(newTrip);
     
-    e.target.reset();
+    // e.target.reset();
   });
+
+function createPost(e){
+    const newTrip = {
+        "id": Date.now(),
+        "userID": parseInt(user),
+        "destinationID": destRepo.destinationID(destinationsInput.value),
+        "travelers": parseInt(numTravelersInput.value),
+        "date": dateInput.value.replaceAll('-', '/'),
+        "duration": parseInt(durationInput.value),
+        "status": "pending",
+        "suggestedActivities": []
+        
+      };
+
+      console.log(newTrip)
+
+      addTrip(newTrip)
+      .catch((error) => {
+        console.log(error)
+        if (error.message === "Failed to fetch") {
+          return errorTag.innerText = "OOPS SORRY something went wrong"
+        } else {
+          return errorTag.innerText = error.message
+        }
+      });
+
+      tripRepo.allTrips.push(newTrip)
+      
+      e.target.reset();
+}
 
 function displayDashboard() {
     const allTrips = tripRepo.travelerTrips(user)
