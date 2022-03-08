@@ -19,9 +19,11 @@ const loginForm = document.getElementById("login");
 const nameInput = document.getElementById("nameInput");
 const passwordInput = document.getElementById("passwordInput");
 const logoutButton = document.getElementById("logout");
+const calcEstimate = document.getElementById("calcEstimate");
+
 
 logoutButton.addEventListener('click', logouut);
-destinationsInput.addEventListener('change', estimateNewTripCost);
+calcEstimate.addEventListener('click', estimateNewTripCost);
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     login()

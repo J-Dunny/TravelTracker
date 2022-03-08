@@ -4,7 +4,6 @@ html {
   background-color: white;
   height: 120vh;
   display: flex;
-  /* width: max-content; */
   flex-direction: column;
   align-items: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -46,7 +45,6 @@ html {
   }
   
 .all-trips{
-  /* width: 648px; */
   display: grid;
   grid-template-columns: repeat(3, 5fr);
   grid-gap: 20px;
@@ -54,11 +52,6 @@ html {
   padding-right: 20px;
   min-height: 60vh;
 }
-
-/* .container{
-  display:flex;
-  flex-direction: row; */
-  /* align-items: flex-start; */
 
 .form-article{
   display:flex;
@@ -68,7 +61,6 @@ html {
   height: max-content;
   padding: 10px;
   border: 1px solid #333B53;
-  /* background-color: #D6D4D2; */
   border-radius: 7px;
   
 }
@@ -78,16 +70,10 @@ html {
   flex-direction: column;
 }
 
-/* .trips{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
 input{
   margin-top: 4px;
   margin-bottom: 10px;
-  width: 9vw;
+  width: 10vw;
 } 
 
 select{
