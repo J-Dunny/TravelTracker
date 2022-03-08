@@ -42,19 +42,20 @@ function login() {
     const userID = nameInput.value.split("r")[2]
     const password = passwordInput.value
     
-    if(username === "traveler" && password === "travel"){
+    if(username === "traveler" && password === "travel" && userID){
         user = parseInt(userID)
         promises()
         domUpdates.login()
     }
 
-    if(username != "traveler"){
+    if(username != "traveler" || !userID){
         domUpdates.userNameError()
     }
 
     if(password != "travel"){
         domUpdates.passwordError()
     }
+    console.log("userID", userID)
 
 }
 
@@ -158,21 +159,5 @@ function estimateNewTripCost() {
     
     return total
 }
-
-// function login() {
-//     const username = nameInput.value.slice(0,8)
-//     // console.log(username)
-//     const userID = nameInput.value.split("r")[2]
-    
-//     const password = passwordInput.value
-//     // console.log(password)
-//     if(username === "traveler" && password === "travel"){
-        
-//     user = parseInt(userID)
-
-//     domUpdates.login()
-//     }
-
-// }
 
 export {displayDashboard, promises}
