@@ -15,23 +15,50 @@ import TripsRepository from './TripsRepository'
 import DestinationsRepository from './DesitinationsRepository'
 import { tripsData, destinationsData, allTravelers, addTrip } from "./apiCalls"
 
-
 const dateInput = document.getElementById('dateInput');
 const durationInput = document.getElementById('durationInput');
 const numTravelersInput = document.getElementById('numTravelersInput');
 const destinationsInput = document.getElementById('destinationsInput');
 const tripForm = document.getElementById('tripForm');
 const errorTag = document.getElementById("errorTag");
+const loginForm = document.getElementById("login");
+const nameInput = document.getElementById("nameInput");
+const passwordInput = document.getElementById("passwordInput");
 
 destinationsInput.addEventListener('change', estimateNewTripCost);
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    login()
+})
 
 let travelerRepo;
 let destRepo;
 let tripRepo;
-let user = 33;
+let user;
+// console.log(user)
 
+function login() {
+    const username = nameInput.value.slice(0,8)
+    const userID = nameInput.value.split("r")[2]
+    const password = passwordInput.value
+    
+    if(username === "traveler" && password === "travel"){
+        user = parseInt(userID)
+        promises()
+        domUpdates.login()
+    }
 
-window.onload = (event) => {
+    if(username != "traveler"){
+        domUpdates.userNameError()
+    }
+
+    if(password != "travel"){
+        domUpdates.passwordError()
+    }
+
+}
+
+function promises() {
     Promise.all([allTravelers, destinationsData, tripsData]).then((data) => {
 
         travelerRepo = new TravelerRepository()
@@ -43,6 +70,7 @@ window.onload = (event) => {
 
         tripRepo = new TripsRepository();
         tripRepo.loadAllTrips(data[2].trips)
+
         displayDashboard()
 
 
@@ -50,11 +78,11 @@ window.onload = (event) => {
 }
 
 tripForm.addEventListener('submit', (e) => {
+
     e.preventDefault();
     // const formData = new FormData(e.target());
     const newTrip = {
-      //add these query selectors
-      "id": 204,
+      "id": Date.now(),
       "userID": parseInt(user),
       "destinationID": destRepo.destinationID(destinationsInput.value),
       "travelers": parseInt(numTravelersInput.value),
@@ -64,14 +92,11 @@ tripForm.addEventListener('submit', (e) => {
       "suggestedActivities": []
       
     };
-    // console.log(newTrip)
+    console.log(newTrip)
     addTrip(newTrip);
+    
     e.target.reset();
   });
-
-
-
-
 
 function displayDashboard() {
     const allTrips = tripRepo.travelerTrips(user)
@@ -79,10 +104,12 @@ function displayDashboard() {
     const yearlyCost = tripRepo.yearlyCost(user, destRepo)
     domUpdates.yearlyCost(yearlyCost)
     domUpdates.destinationsInput(destRepo)
+    domUpdates.userName(travelerRepo, user)
+    // displayTravelerData(travelerId)
+    console.log(allTrips)
 }
 
 function estimateNewTripCost() {
-
     const destId = destRepo.allDestinations.find(destination => destination.destination === destinationsInput.value).id
 
     const flightCost = destRepo.flightCost(destId) * numTravelersInput.value * 2
@@ -94,7 +121,24 @@ function estimateNewTripCost() {
     const total = flightCost + lodgingCost + fee
 
     domUpdates.estimatedTripCost(total)
-
+    
     return total
 }
 
+// function login() {
+//     const username = nameInput.value.slice(0,8)
+//     // console.log(username)
+//     const userID = nameInput.value.split("r")[2]
+    
+//     const password = passwordInput.value
+//     // console.log(password)
+//     if(username === "traveler" && password === "travel"){
+        
+//     user = parseInt(userID)
+
+//     domUpdates.login()
+//     }
+
+// }
+
+export {displayDashboard, promises}

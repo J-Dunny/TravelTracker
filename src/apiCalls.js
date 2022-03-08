@@ -6,6 +6,8 @@ const allTravelers = fetch('http://localhost:3001/api/v1/travelers').then(respon
 
 // const errorTag = document.getElementById("errorTag")
 
+import { promises } from "./scripts"
+
 const addTrip = (newTrip) => {
   fetch('http://localhost:3001/api/v1/trips', {
     method: 'POST',
@@ -17,6 +19,8 @@ const addTrip = (newTrip) => {
       if (!response.ok) {
         throw new Error("Please make sure that all fields are filled out")
       } else {
+        // promises();
+        // displayDashboard();
         return response.json()
       }
     })
@@ -28,6 +32,7 @@ const addTrip = (newTrip) => {
         return errorTag.innerText = error.message
       }
     })
+    
 }
 
 

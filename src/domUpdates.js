@@ -1,7 +1,13 @@
-const listAllTrips = document.getElementById('listAllTrips')
-const displayYearlyCost = document.getElementById('yearlyCost')
-const destinationsInput = document.getElementById('destinationsInput')
-const estimate = document.getElementById('estimate')
+const listAllTrips = document.getElementById('listAllTrips');
+const displayYearlyCost = document.getElementById('yearlyCost');
+const destinationsInput = document.getElementById('destinationsInput');
+const estimate = document.getElementById('estimate');
+const userName = document.getElementById('userName');
+const formArticle = document.getElementById('formArticle');
+const login = document.getElementById('login');
+const userNameError = document.getElementById('userNameError');
+const passwordError = document.getElementById('passwordError');
+
 
 
 let domUpdates = {
@@ -27,10 +33,27 @@ let domUpdates = {
 
     estimatedTripCost(total){
         estimate.innerText = `Estimated Trip Cost = $${total}`
+    },
+
+    userName(travelerRepo, user){
+        userName.innerText = `Welcome, ${travelerRepo.displayTravelerData(user).name.split(' ')[0]}!`
+    },
+
+    login(){
+        formArticle.classList.remove('hidden')
+        listAllTrips.classList.remove('hidden')
+        login.classList.add('hidden')
+    },
+
+    userNameError(){
+        userNameError.innerText = "Username is incorrect"
+    },
+
+    passwordError(){
+        passwordError.innerText = "Password is incorrect"
     }
 
-
-
+    
 
 }
 

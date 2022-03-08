@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Tracker</title>
 </head>
+
 <body>
   <h1 class="Title">Travel Tracker</h1>
+  <hr size="1" width="30%" color="black">
   <section class="container">
-    <article id="formArticle" class="form-article">
-      <form id="tripForm" class ="trip-form">
+    <!-- <section id="login" class="login"> -->
+      <form id="login" class="login">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="nameInput" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="passwordInput" required>
+        <!-- <input type="submit" name="submit" id=""> -->
+        <button>Login</button>
+        <p id="userNameError" class="userName-error"></p>
+        <p id="passwordError" class="password-error"></p>
+      </form>
+      
+    <!-- </section> -->
+    <article id="formArticle" class="form-article hidden">
+      <h1 id="userName"></h1>
+      <hr size="1" width="100%" color="black">
+      <h2>New Trip:</h2>
+      <form id="tripForm" class="trip-form">
         <label for="date">Date:</label>
-        <input id="dateInput" type="text" placeholder="Year/Month/Day" name="date">
+        <input id="dateInput" type="text" placeholder="yyyy/mm/dd" name="date" required>
         <label for="duration">Duration in Days:</label>
-        <input id="durationInput" type="number" name="duration" placeholder="4">
+        <input id="durationInput" type="number" name="duration" placeholder="#" required>
         <label for="numTravelers">Number of Travelers:</label>
-        <input id="numTravelersInput" type="number" name="numTravelers" placeholder="1">
+        <input id="numTravelersInput" type="number" name="numTravelers" placeholder="#" required>
         <label for="destinationsInput">Destination:</label>
-        <select name="destinationsInput" id="destinationsInput">
+        <select name="destinationsInput" id="destinationsInput" required>
         </select>
         <input type="submit" value="Submit">
         <p id="errorTag" class="error"></p>
@@ -26,23 +45,10 @@
       <p id="estimate"></p>
       <p id="yearlyCost">Total amount spent this year:</p>
     </article>
-    
-    
-  <section id="listAllTrips" class="all-trips">
-    <!-- <article id="trip-Card" class="trip-card">
-      <p>destination.destination</p>
-      <p>destination.image</p>
-      <p>trip.date</p>
-      <p>trip.duration</p>
-      <p>trip.status</p>
-      <p>trips.travelers</p>
-    </article> -->
-    <!-- all trips cards -->
+    <section id="listAllTrips" class="all-trips hidden">
+    </section>
   </section>
-  
-</section>
-  <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
-
 </body>
+
 </html>

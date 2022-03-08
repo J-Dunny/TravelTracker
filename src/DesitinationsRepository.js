@@ -6,7 +6,6 @@ class DestinationsRepository {
 
     loadAllDestination(allDestinationsData) {
         this.allDestinations = allDestinationsData.map(destination => new Destination(destination))
-        
     }
 
     destination(destID){
@@ -20,9 +19,8 @@ class DestinationsRepository {
 
         return destination
     }
-    
+
     flightCost(destID){
-        
         const cost = this.allDestinations.find(destination => destination.id === destID)
 
         return cost.estimatedFlightCostPerPerson
@@ -32,9 +30,6 @@ class DestinationsRepository {
 
         return cost.estimatedLodgingCostPerDay
     }
-    
 }
-
-
 
 export default DestinationsRepository

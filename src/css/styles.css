@@ -1,21 +1,32 @@
 body,
 html {
-  color: black;
+  color: #333B53;
   background-color: white;
   height: 120vh;
   display: flex;
+  /* width: max-content; */
   flex-direction: column;
   align-items: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.container{
+  width: max-content;
+}
 
-.dasboard-container {
+  .login{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: auto;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #333B53;
+    border-radius: 7px;
+  }
+
+
+
+  p{
+    margin: 1vh;
   }
 
   .trip-card {
@@ -38,7 +49,8 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 5fr);
   grid-gap: 20px;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   min-height: 60vh;
 }
 
@@ -51,16 +63,26 @@ html {
   display:flex;
   flex-direction: column;
   width: 18vw;
-  height: 60vh;
+  font-size: 1.3vw;
+  height: max-content;
   padding: 10px;
-  border: 1px solid #D6D4D2;
-
+  border: 1px solid #333B53;
+  /* background-color: #D6D4D2; */
+  border-radius: 7px;
+  
 }
 
 .trip-form{
   display:flex;
   flex-direction: column;
 }
+
+/* .trips{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
 input{
   margin-top: 4px;
   margin-bottom: 10px;
@@ -73,15 +95,10 @@ select{
   width:10vw;
 }
 
-/* .idea-box-section {
-  width: 648px;
-  display: grid;
-  grid-template-columns: repeat(3, 5fr);
-  grid-gap: 20px;
-  padding: 20px;
-  min-height: 60vh;
-  background-color: #EAEAF4;
-} */
   img{
     width: 22vw;
+  }
+
+  .hidden {
+    display: none;
   }
