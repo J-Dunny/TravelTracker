@@ -35,27 +35,30 @@ let travelerRepo;
 let destRepo;
 let tripRepo;
 let user;
-console.log(user)
+// console.log(user)
 
 function login() {
     const username = nameInput.value.slice(0,8)
-    // console.log(username)
     const userID = nameInput.value.split("r")[2]
-    
     const password = passwordInput.value
-    // console.log(password)
+    
     if(username === "traveler" && password === "travel"){
-        
-    user = parseInt(userID)
-    promises()
-    domUpdates.login()
-    console.log(user)
+        user = parseInt(userID)
+        promises()
+        domUpdates.login()
+    }
 
+    if(username != "traveler"){
+        domUpdates.userNameError()
+    }
+
+    if(password != "travel"){
+        domUpdates.passwordError()
     }
 
 }
 
-let promises = (event) => {
+function promises() {
     Promise.all([allTravelers, destinationsData, tripsData]).then((data) => {
 
         travelerRepo = new TravelerRepository()
@@ -67,6 +70,7 @@ let promises = (event) => {
 
         tripRepo = new TripsRepository();
         tripRepo.loadAllTrips(data[2].trips)
+
         displayDashboard()
 
 
@@ -74,10 +78,10 @@ let promises = (event) => {
 }
 
 tripForm.addEventListener('submit', (e) => {
+
     e.preventDefault();
     // const formData = new FormData(e.target());
     const newTrip = {
-      //add these query selectors
       "id": Date.now(),
       "userID": parseInt(user),
       "destinationID": destRepo.destinationID(destinationsInput.value),
@@ -90,6 +94,7 @@ tripForm.addEventListener('submit', (e) => {
     };
     console.log(newTrip)
     addTrip(newTrip);
+    
     e.target.reset();
   });
 
@@ -101,6 +106,7 @@ function displayDashboard() {
     domUpdates.destinationsInput(destRepo)
     domUpdates.userName(travelerRepo, user)
     // displayTravelerData(travelerId)
+    console.log(allTrips)
 }
 
 function estimateNewTripCost() {
@@ -135,3 +141,4 @@ function estimateNewTripCost() {
 
 // }
 
+export {displayDashboard, promises}
