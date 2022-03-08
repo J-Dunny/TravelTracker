@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Tracker</title>
 </head>
-
 <body>
   <h1 class="Title">Travel Tracker</h1>
   <hr size="1" width="30%" color="black">
+  <form id="login" class="login">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="nameInput" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="passwordInput" required>
+    <button>Login</button>
+    <p id="userNameError" class="userName-error"></p>
+    <p id="passwordError" class="password-error"></p>
+  </form>
   <section class="container">
-      <form id="login" class="login">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="nameInput" required>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="passwordInput" required>
-        <button>Login</button>
-        <p id="userNameError" class="userName-error"></p>
-        <p id="passwordError" class="password-error"></p>
-      </form>
     <article id="formArticle" class="form-article hidden">
       <h1 id="userName"></h1>
       <button id="logout">Log Out</button>
@@ -48,5 +46,4 @@
   </section>
   <script src="bundle.js"></script>
 </body>
-
 </html>
