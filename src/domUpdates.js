@@ -13,6 +13,7 @@ const passwordError = document.getElementById('passwordError');
 let domUpdates = {
 
     listAllTrips(allTrips, destRepo) {
+        listAllTrips.innerHTML = ''
         allTrips.forEach(trip => listAllTrips.innerHTML += `<article class="trip-card">
             <p>${destRepo.destination(trip.destinationID).destination}</p>
             <img src="${destRepo.destination(trip.destinationID).image}" alt="">

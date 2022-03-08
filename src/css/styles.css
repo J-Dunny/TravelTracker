@@ -13,6 +13,9 @@ html {
 
 .container{
   width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
   .login{
@@ -22,8 +25,6 @@ html {
     border: 1px solid #333B53;
     border-radius: 7px;
   }
-
-
 
   p{
     margin: 1vh;
@@ -54,11 +55,11 @@ html {
   min-height: 60vh;
 }
 
-.container{
+/* .container{
   display:flex;
-  flex-direction: row;
+  flex-direction: row; */
   /* align-items: flex-start; */
-}
+
 .form-article{
   display:flex;
   flex-direction: column;
