@@ -24,7 +24,6 @@ describe('TripsRepo Test', function() {
       });
 
     it("should have method to display all trips for user: past present, upcomming, pending", function () {
-      // console.log(tripRepo.travelerTrips(42))
       expect(tripRepo.travelerTrips(42)).to.deep.equal([
         {
           id: 5,
@@ -73,7 +72,7 @@ describe('TripsRepo Test', function() {
 
     it("method for yearly cost should return with a message if there are no trips", function () {
       
-      expect(tripRepo.yearlyCost(1, destRepo)).to.equal("No trips this year!");
+      expect(tripRepo.yearlyCost(1, destRepo)).to.equal("0");
     });
 
 });

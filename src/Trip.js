@@ -10,7 +10,5 @@ class Trip {
         this.suggestedActivities = tripObj.suggestedActivities;
     }
 }
-//method to display trip info
-//sad path for if there is no trip
 
 export default Trip

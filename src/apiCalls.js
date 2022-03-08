@@ -29,14 +29,6 @@ const addTrip = (newTrip) => {
         return response.json()
       }
     })
-    // .catch((error) => {
-    //   console.log(error)
-    //   if (error.message === "Failed to fetch") {
-    //     return errorTag.innerText = "OOPS SORRY something went wrong"
-    //   } else {
-    //     return errorTag.innerText = error.message
-    //   }
-    // })
     
 }
 

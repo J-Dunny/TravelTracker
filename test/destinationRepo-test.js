@@ -33,7 +33,6 @@ destRepo.loadAllDestination(destinationsData)
   });
 
   it('should return a destionationID by passing in the name', function() {
-    console.log(destRepo.destinationID("Lima, Peru"))
     expect(destRepo.destinationID("Lima, Peru")).to.equal(1)
   });
 

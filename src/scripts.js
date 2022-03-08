@@ -1,9 +1,6 @@
 import './css/styles.css';
 import domUpdates from './domUpdates'
 import './images/turing-logo.png'
-import Traveler from './Traveler';
-import Trip from './Trip';
-import Destination from './Destination';
 import TravelerRepository from './TravelerRepository';
 import TripsRepository from './TripsRepository'
 import DestinationsRepository from './DesitinationsRepository'
@@ -21,7 +18,6 @@ const passwordInput = document.getElementById("passwordInput");
 const logoutButton = document.getElementById("logout");
 const calcEstimate = document.getElementById("calcEstimate");
 
-
 logoutButton.addEventListener('click', logouut);
 calcEstimate.addEventListener('click', estimateNewTripCost);
 loginForm.addEventListener('submit', (e) => {
@@ -35,17 +31,17 @@ let tripRepo;
 let user;
 
 function login() {
-    const username = nameInput.value.slice(0,8)
+    const username = nameInput.value.slice(0, 8)
     const userID = nameInput.value.split("r")[2]
     const password = passwordInput.value
 
-     if(username != "traveler" || !userID || parseInt(userID) > 50 || parseInt(userID) < 1){
+    if (username != "traveler" || !userID || parseInt(userID) > 50 || parseInt(userID) < 1) {
         domUpdates.userNameError()
 
-    } else if(password != "travel"){
+    } else if (password != "travel") {
         domUpdates.passwordError()
 
-    } else if(username === "traveler" && password === "travel" && userID){
+    } else if (username === "traveler" && password === "travel" && userID) {
         user = parseInt(userID)
         promises()
         domUpdates.login()
@@ -54,7 +50,6 @@ function login() {
 
 function promises() {
     Promise.all([allTravelersFetch(), destinationsDataFetch(), tripsDataFetch()]).then((data) => {
-
         travelerRepo = new TravelerRepository()
         travelerRepo.loadTravelerInfo(data[0].travelers)
 
@@ -71,14 +66,12 @@ function promises() {
 }
 
 tripForm.addEventListener('submit', (e) => {
-
     e.preventDefault();
-
     createPost(e)
     displayDashboard();
-  });
+});
 
-function createPost(e){
+function createPost(e) {
     const newTrip = {
         "id": Date.now(),
         "userID": parseInt(user),
@@ -88,24 +81,21 @@ function createPost(e){
         "duration": parseInt(durationInput.value),
         "status": "pending",
         "suggestedActivities": []
+    };
+
+    addTrip(newTrip)
+        .catch((error) => {
+            console.log(error)
+            if (error.message === "Failed to fetch") {
+                return errorTag.innerText = "OOPS SORRY something went wrong"
+            } else {
+                return errorTag.innerText = error.message
+            }
+        });
         
-      };
+    tripRepo.allTrips.push(newTrip)
 
-      console.log(newTrip)
-
-      addTrip(newTrip)
-      .catch((error) => {
-        console.log(error)
-        if (error.message === "Failed to fetch") {
-          return errorTag.innerText = "OOPS SORRY something went wrong"
-        } else {
-          return errorTag.innerText = error.message
-        }
-      });
-
-      tripRepo.allTrips.push(newTrip)
-      
-      e.target.reset();
+    e.target.reset();
 }
 
 function displayDashboard() {
@@ -116,28 +106,21 @@ function displayDashboard() {
     domUpdates.yearlyCost(yearlyCost)
     domUpdates.destinationsInput(destRepo)
     domUpdates.userName(travelerRepo, user)
-    
-    console.log(allTrips)
 }
 
 function estimateNewTripCost() {
     const destId = destRepo.allDestinations.find(destination => destination.destination === destinationsInput.value).id
-
     const flightCost = destRepo.flightCost(destId) * numTravelersInput.value * 2
-
     const lodgingCost = destRepo.lodgingCost(destId) * numTravelersInput.value * durationInput.value
-
     const fee = (flightCost + lodgingCost) * .1;
-
     const total = flightCost + lodgingCost + fee
 
     domUpdates.estimatedTripCost(total)
-    
+
     return total
 }
 
-function logouut(){
+function logouut() {
     user = null;
     domUpdates.displayLogout();
 }
-    
