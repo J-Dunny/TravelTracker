@@ -56,7 +56,6 @@ function promises() {
         destRepo = new DestinationsRepository();
         destRepo.loadAllDestination(data[1].destinations)
 
-
         tripRepo = new TripsRepository();
         tripRepo.loadAllTrips(data[2].trips)
 

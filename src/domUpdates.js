@@ -8,7 +8,6 @@ const login = document.getElementById('login');
 const userNameError = document.getElementById('userNameError');
 const passwordError = document.getElementById('passwordError');
 
-
 let domUpdates = {
     listAllTrips(allTrips, destRepo) {
         listAllTrips.innerHTML = ''

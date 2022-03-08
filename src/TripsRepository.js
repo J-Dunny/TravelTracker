@@ -10,7 +10,7 @@ class TripsRepository {
 
     travelerTrips(travelerId) {
         const allTrips = this.allTrips.filter(trip => trip.userID === travelerId)
-        
+
         return allTrips
     }
 
