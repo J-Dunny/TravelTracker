@@ -1,5 +1,5 @@
 class Trip {
-    constructor(tripObj){
+    constructor(tripObj) {
         this.id = tripObj.id;
         this.userID = tripObj.userID;
         this.destinationID = tripObj.destinationID;
@@ -10,7 +10,5 @@ class Trip {
         this.suggestedActivities = tripObj.suggestedActivities;
     }
 }
-//method to display trip info
-//sad path for if there is no trip
 
 export default Trip

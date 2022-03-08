@@ -1,5 +1,5 @@
 class Destination {
-    constructor(destObj){
+    constructor(destObj) {
         this.id = destObj.id;
         this.destination = destObj.destination;
         this.estimatedLodgingCostPerDay = destObj.estimatedLodgingCostPerDay;

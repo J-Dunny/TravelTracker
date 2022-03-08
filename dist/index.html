@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Tracker</title>
 </head>
-
 <body>
   <h1 class="Title">Travel Tracker</h1>
   <hr size="1" width="30%" color="black">
+  <form id="login" class="login">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="nameInput" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="passwordInput" required>
+    <button>Login</button>
+    <p id="userNameError" class="userName-error"></p>
+    <p id="passwordError" class="password-error"></p>
+  </form>
   <section class="container">
-    <!-- <section id="login" class="login"> -->
-      <form id="login" class="login">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="nameInput" required>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="passwordInput" required>
-        <!-- <input type="submit" name="submit" id=""> -->
-        <button>Login</button>
-        <p id="userNameError" class="userName-error"></p>
-        <p id="passwordError" class="password-error"></p>
-      </form>
-      
-    <!-- </section> -->
     <article id="formArticle" class="form-article hidden">
       <h1 id="userName"></h1>
+      <button id="logout">Log Out</button>
       <hr size="1" width="100%" color="black">
       <h2>New Trip:</h2>
       <form id="tripForm" class="trip-form">
@@ -42,6 +37,7 @@
         <input type="submit" value="Submit">
         <p id="errorTag" class="error"></p>
       </form>
+      <button id="calcEstimate">Trip Estimate</button>
       <p id="estimate"></p>
       <p id="yearlyCost">Total amount spent this year:</p>
     </article>
@@ -50,5 +46,4 @@
   </section>
   <script src="bundle.js"></script>
 </body>
-
 </html>

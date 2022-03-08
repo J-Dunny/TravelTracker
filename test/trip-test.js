@@ -52,7 +52,4 @@ describe('Trip Test', function() {
     expect(newTrip.suggestedActivities).to.deep.equal([]);
   });
 
-  
-
-
 });

@@ -17,13 +17,24 @@ destRepo.loadAllDestination(destinationsData)
     expect(destRepo).to.be.an.instanceOf(DestinationsRepository);
   });
 
-  // it.skip('should hold all destinations', function() {
-  //   expect(true).to.equal(true);
-  // });
+  it('should hold all destinations', function() {
+    expect(destRepo.allDestinations.length).to.equal(50);
+  });
 
-  // it.skip('should find one destination from name', function() {
-  //   expect(true).to.equal(true);
-  // });
+  it('should find one destionation from ID', function() {
+    expect(destRepo.destination(2)).to.deep.equal({
+      id: 2,
+      destination: 'Stockholm, Sweden',
+      estimatedLodgingCostPerDay: 100,
+      estimatedFlightCostPerPerson: 780,
+      image: 'https://images.unsplash.com/photo-1560089168-6516081f5bf1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+      alt: 'city with boats on the water during the day time'
+    });
+  });
+
+  it('should return a destionationID by passing in the name', function() {
+    expect(destRepo.destinationID("Lima, Peru")).to.equal(1)
+  });
 
   it('should return flight cost for trip', function() {
     expect(destRepo.flightCost(2)).to.equal(780);

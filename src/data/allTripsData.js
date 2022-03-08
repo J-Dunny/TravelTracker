@@ -8,7 +8,7 @@ const tripsData = [
     "duration": 8,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -20,7 +20,7 @@ const tripsData = [
     "duration": 18,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -32,7 +32,7 @@ const tripsData = [
     "duration": 17,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -44,7 +44,7 @@ const tripsData = [
     "duration": 10,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -56,7 +56,7 @@ const tripsData = [
     "duration": 18,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -68,7 +68,7 @@ const tripsData = [
     "duration": 9,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -80,7 +80,7 @@ const tripsData = [
     "duration": 20,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -92,7 +92,7 @@ const tripsData = [
     "duration": 4,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -104,7 +104,7 @@ const tripsData = [
     "duration": 19,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -116,7 +116,7 @@ const tripsData = [
     "duration": 17,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -128,7 +128,7 @@ const tripsData = [
     "duration": 4,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -140,7 +140,7 @@ const tripsData = [
     "duration": 6,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -152,7 +152,7 @@ const tripsData = [
     "duration": 11,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -164,7 +164,7 @@ const tripsData = [
     "duration": 10,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -176,7 +176,7 @@ const tripsData = [
     "duration": 6,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -188,7 +188,7 @@ const tripsData = [
     "duration": 9,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -200,7 +200,7 @@ const tripsData = [
     "duration": 20,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -212,7 +212,7 @@ const tripsData = [
     "duration": 17,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -224,7 +224,7 @@ const tripsData = [
     "duration": 5,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -236,7 +236,7 @@ const tripsData = [
     "duration": 6,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -248,7 +248,7 @@ const tripsData = [
     "duration": 18,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -260,7 +260,7 @@ const tripsData = [
     "duration": 19,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -272,7 +272,7 @@ const tripsData = [
     "duration": 18,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -284,7 +284,7 @@ const tripsData = [
     "duration": 7,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -296,7 +296,7 @@ const tripsData = [
     "duration": 9,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -308,7 +308,7 @@ const tripsData = [
     "duration": 9,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -320,7 +320,7 @@ const tripsData = [
     "duration": 5,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -332,7 +332,7 @@ const tripsData = [
     "duration": 14,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -344,7 +344,7 @@ const tripsData = [
     "duration": 4,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -356,7 +356,7 @@ const tripsData = [
     "duration": 5,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -368,7 +368,7 @@ const tripsData = [
     "duration": 15,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -380,7 +380,7 @@ const tripsData = [
     "duration": 6,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -392,7 +392,7 @@ const tripsData = [
     "duration": 19,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -404,7 +404,7 @@ const tripsData = [
     "duration": 5,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -416,7 +416,7 @@ const tripsData = [
     "duration": 16,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -428,7 +428,7 @@ const tripsData = [
     "duration": 17,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -440,7 +440,7 @@ const tripsData = [
     "duration": 18,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -452,7 +452,7 @@ const tripsData = [
     "duration": 10,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -464,7 +464,7 @@ const tripsData = [
     "duration": 7,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -476,7 +476,7 @@ const tripsData = [
     "duration": 13,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -488,7 +488,7 @@ const tripsData = [
     "duration": 11,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -500,7 +500,7 @@ const tripsData = [
     "duration": 14,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -512,7 +512,7 @@ const tripsData = [
     "duration": 5,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -524,7 +524,7 @@ const tripsData = [
     "duration": 4,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -536,7 +536,7 @@ const tripsData = [
     "duration": 9,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -548,7 +548,7 @@ const tripsData = [
     "duration": 11,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -560,7 +560,7 @@ const tripsData = [
     "duration": 14,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -572,7 +572,7 @@ const tripsData = [
     "duration": 8,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -584,7 +584,7 @@ const tripsData = [
     "duration": 16,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   },
   {
@@ -596,7 +596,7 @@ const tripsData = [
     "duration": 17,
     "status": "approved",
     "suggestedActivities": [
-      
+
     ]
   }
 ]

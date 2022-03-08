@@ -8,10 +8,7 @@ const login = document.getElementById('login');
 const userNameError = document.getElementById('userNameError');
 const passwordError = document.getElementById('passwordError');
 
-
-
 let domUpdates = {
-
     listAllTrips(allTrips, destRepo) {
         listAllTrips.innerHTML = ''
         allTrips.forEach(trip => listAllTrips.innerHTML += `<article class="trip-card">
@@ -28,34 +25,37 @@ let domUpdates = {
         displayYearlyCost.innerText = `You have spent $${yearlyCost} on your trips this year`
     },
 
-    destinationsInput(destRepo){
+    destinationsInput(destRepo) {
         destRepo.allDestinations.forEach(destination => destinationsInput.innerHTML += `<option value="${destination.destination}">${destination.destination}</option>`)
     },
 
-    estimatedTripCost(total){
+    estimatedTripCost(total) {
         estimate.innerText = `Estimated Trip Cost = $${total}`
     },
 
-    userName(travelerRepo, user){
+    userName(travelerRepo, user) {
         userName.innerText = `Welcome, ${travelerRepo.displayTravelerData(user).name.split(' ')[0]}!`
     },
 
-    login(){
+    login() {
         formArticle.classList.remove('hidden')
         listAllTrips.classList.remove('hidden')
         login.classList.add('hidden')
     },
 
-    userNameError(){
+    userNameError() {
         userNameError.innerText = "Username is incorrect"
     },
 
-    passwordError(){
+    passwordError() {
         passwordError.innerText = "Password is incorrect"
+    },
+
+    displayLogout() {
+        formArticle.classList.add('hidden')
+        listAllTrips.classList.add('hidden')
+        login.classList.remove('hidden')
     }
-
-    
-
 }
 
 export default domUpdates
