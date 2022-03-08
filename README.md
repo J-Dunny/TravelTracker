@@ -20,9 +20,9 @@ Travel Tracker is the final solo project built during Mod 2 of the Turing School
 
 ### Features
 
-- Login: On load, a login form will apear where a user will login with username traveler and then a number between 1-50. The password is travel.
-- Dashboard: After the user logs into the page they should all of their trips that they have made and any in the future. On the left side they will see how much they have spent this year on trips.
-- Book Trip: A form will be on the left side of the page allowing the user to book a new trip being able to pick the date, duration, number of travelers, and chose a destination from a drop down menu. There is a calculate trip cost button that will show an estimate of how much the new trip will cost.
+- **Login:** On load, a login form will apear where a user will login with username traveler and then a number between 1-50. The password is travel.
+- **Dashboard:** After the user logs into the page they should all of their trips that they have made and any in the future. On the left side they will see how much they have spent this year on trips.
+- **Book Trip:** A form will be on the left side of the page allowing the user to book a new trip being able to pick the date, duration, number of travelers, and chose a destination from a drop down menu. There is a calculate trip cost button that will show an estimate of how much the new trip will cost.
 
 ![image](https://media.giphy.com/media/K2Gr75T9ic41voX7lZ/giphy.gif)
 
