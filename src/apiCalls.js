@@ -12,13 +12,6 @@ function allTravelersFetch(){
   return allTravelers
 }
 
-
-// const oneTraveler = fetch('http://localhost:3001/api/v1/travelers').then(responses => responses.json())
-
-// const errorTag = document.getElementById("errorTag")
-
-import { promises } from "./scripts"
-
 const addTrip = (newTrip) => {
   return fetch('http://localhost:3001/api/v1/trips', {
     method: 'POST',

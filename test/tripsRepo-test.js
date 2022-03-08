@@ -67,12 +67,12 @@ describe('TripsRepo Test', function() {
 
 
     it("method for total ammount user spent on trips this year and include 10% travel fee", function () {
-      // console.log(tripRepo.yearlyCost(44, destRepo))
+      
       expect(tripRepo.yearlyCost(33, destRepo)).to.equal(41052);
     });
 
-    it("method for total ammount user spent on trips this year and include 10% travel fee", function () {
-      // console.log(tripRepo.yearlyCost(44, destRepo))
+    it("method for yearly cost should return with a message if there are no trips", function () {
+      
       expect(tripRepo.yearlyCost(1, destRepo)).to.equal("No trips this year!");
     });
 

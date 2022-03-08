@@ -52,6 +52,12 @@ let domUpdates = {
 
     passwordError(){
         passwordError.innerText = "Password is incorrect"
+    },
+
+    displayLogout(){
+        formArticle.classList.add('hidden')
+        listAllTrips.classList.add('hidden')
+        login.classList.remove('hidden')
     }
 
     
